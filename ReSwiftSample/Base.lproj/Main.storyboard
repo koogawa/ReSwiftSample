@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ReSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -46,12 +46,30 @@
                                     <action selector="didTapDecreaseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bLB-Bv-kvl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx2-zx-U58">
+                                <rect key="frame" x="285" y="285" width="31" height="30"/>
+                                <state key="normal" title="New"/>
+                                <connections>
+                                    <action selector="didTapNewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fxf-jO-Obh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7G-6Z-Yc9">
+                                <rect key="frame" x="273" y="323" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="didTapDismissButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="asM-TI-dzi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Cx2-zx-U58" firstAttribute="centerX" secondItem="8bA-yR-0T0" secondAttribute="centerX" id="8Pb-iw-87s"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8bA-yR-0T0" secondAttribute="bottom" constant="348" id="9B5-K6-w1b"/>
                             <constraint firstItem="XdE-5z-Va1" firstAttribute="leading" secondItem="8bA-yR-0T0" secondAttribute="leading" id="C7U-Db-W3U"/>
                             <constraint firstItem="w8M-vB-roV" firstAttribute="trailing" secondItem="XdE-5z-Va1" secondAttribute="trailing" id="CJ4-Vx-ngz"/>
+                            <constraint firstItem="Cx2-zx-U58" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HIE-u2-25B"/>
+                            <constraint firstItem="Cx2-zx-U58" firstAttribute="centerX" secondItem="o7G-6Z-Yc9" secondAttribute="centerX" id="MhI-Tw-Kcx"/>
+                            <constraint firstItem="o7G-6Z-Yc9" firstAttribute="top" secondItem="Cx2-zx-U58" secondAttribute="bottom" constant="8" symbolic="YES" id="Qph-jw-v97"/>
                             <constraint firstItem="w8M-vB-roV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SN7-lg-dAA"/>
                             <constraint firstItem="XdE-5z-Va1" firstAttribute="top" secondItem="w8M-vB-roV" secondAttribute="bottom" constant="8" symbolic="YES" id="TsE-ZS-OBO"/>
                             <constraint firstItem="w8M-vB-roV" firstAttribute="leading" secondItem="XdE-5z-Va1" secondAttribute="leading" id="geW-Ja-PQH"/>
