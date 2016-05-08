@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8M-vB-roV">
+                                <rect key="frame" x="260" y="128" width="80" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="PWf-r1-IZX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdE-5z-Va1">
+                                <rect key="frame" x="260" y="184" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Umd-K2-TLX"/>
+                                </constraints>
+                                <state key="normal" title="increase"/>
+                                <connections>
+                                    <action selector="didTapIncreaseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gad-dm-lmh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bA-yR-0T0">
+                                <rect key="frame" x="260" y="222" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kDf-NL-JaW"/>
+                                </constraints>
+                                <state key="normal" title="decrease"/>
+                                <connections>
+                                    <action selector="didTapDecreaseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bLB-Bv-kvl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8bA-yR-0T0" secondAttribute="bottom" constant="348" id="9B5-K6-w1b"/>
+                            <constraint firstItem="XdE-5z-Va1" firstAttribute="leading" secondItem="8bA-yR-0T0" secondAttribute="leading" id="C7U-Db-W3U"/>
+                            <constraint firstItem="w8M-vB-roV" firstAttribute="trailing" secondItem="XdE-5z-Va1" secondAttribute="trailing" id="CJ4-Vx-ngz"/>
+                            <constraint firstItem="w8M-vB-roV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SN7-lg-dAA"/>
+                            <constraint firstItem="XdE-5z-Va1" firstAttribute="top" secondItem="w8M-vB-roV" secondAttribute="bottom" constant="8" symbolic="YES" id="TsE-ZS-OBO"/>
+                            <constraint firstItem="w8M-vB-roV" firstAttribute="leading" secondItem="XdE-5z-Va1" secondAttribute="leading" id="geW-Ja-PQH"/>
+                            <constraint firstItem="w8M-vB-roV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="108" id="l1R-O0-ozG"/>
+                            <constraint firstItem="8bA-yR-0T0" firstAttribute="top" secondItem="XdE-5z-Va1" secondAttribute="bottom" constant="8" symbolic="YES" id="qpn-Jh-DF2"/>
+                            <constraint firstItem="XdE-5z-Va1" firstAttribute="trailing" secondItem="8bA-yR-0T0" secondAttribute="trailing" id="t0u-MI-wnd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="w8M-vB-roV" id="tMZ-KN-YJA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
